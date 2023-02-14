@@ -1,0 +1,17 @@
+.services {
+  background-image: var(--second-gradient);
+  &__subtitle {
+    color: var(--title-color);
+    font-size: var(--tiny-font-size);
+    font-weight: 700;
+    margin-bottom: 65px;
+    display: block;
+  }
+  &__title {
+    font-size: var(--h4-font-size);
+    margin-bottom: 15px;
+  }
+  &__description {
+    min-height: 175px;
+  }
+}

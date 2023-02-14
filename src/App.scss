@@ -89,7 +89,7 @@ img {
 
 /* 컴포넌트 */
 .container {
-  background-color: var(--primary-color);
+  /* background-color: var(--primary-color); */
   max-width: 1300px;
   padding-inline: 12px;
   margin-inline: auto;
@@ -98,4 +98,97 @@ img {
 .text-cs {
   text-transform: uppercase;
   letter-spacing: 0.05em;
+}
+
+.btn,
+.hero__link {
+  color: var(--title-color);
+  font-size: var(--tiny-font-size);
+  font-weight: 700;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.btn {
+  position: relative;
+  border: 2px solid var(--border-color);
+  padding-inline: 40px;
+  border-radius: 56px;
+  box-shadow: var(--shadow);
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    background-color: var(--primary-color);
+    border-radius: inherit;
+    transform: scale(0.3);
+    filter: blur(10px);
+    opacity: 0;
+    transition: all 0.7s var(--transition);
+    z-index: -1;
+  }
+  &:hover::before {
+    transform: scale(1);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+.section {
+  padding-bottom: 220px;
+  &__title,
+  &__subtitle {
+    text-align: center;
+  }
+  &__title {
+    font-size: var(--h1-font-size);
+  }
+  &__subtitle {
+    color: var(--primary-color);
+    font-size: var(--smaller-font-size);
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 60px;
+    span {
+      font-family: var(--second-font);
+      color: var(--title-color);
+      font-size: var(--h3-font-size);
+      text-transform: capitalize;
+      margin-left: 10px;
+    }
+  }
+}
+
+.card {
+  background-color: var(--container-color);
+  overflow: hidden;
+  &-one {
+    padding: 30px 35px;
+    border-radius: 18px;
+  }
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--title-color);
+  font-weight: 700;
+  &__icon {
+    color: var(--primary-color);
+    margin-left: 20px;
+    transition: all 0.3s var(--transition);
+  }
+  &:hover .link__icon {
+    margin-left: 15px;
+  }
+}
+
+.c__shape {
+  right: -24px;
+  bottom: -24px;
+  widows: 141px;
+  height: 141px;
 }
