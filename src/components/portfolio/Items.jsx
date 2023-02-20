@@ -29,7 +29,6 @@ const Items = ({ projectItems }) => {
               See Pricing
               <FaArrowRight className="link__icon"></FaArrowRight>
             </a>
-            <img src={shapeTwo} alt="" className="shape c__shape" />
           </motion.div>
         );
       })}
